@@ -22,6 +22,10 @@ function App() {
       <button type="button" onClick={addRandomNumber}>
         Add
       </button>
+      <button style={{
+        color: "white",
+        backgroundColor: "red",
+      }} type="button" onClick={() => dispatch({ type: "RESET" })}>Reset</button>
       <p>
         List : <span className="numbers-list">{state.numbers.join(', ')}</span>
       </p>
@@ -35,6 +39,8 @@ function App() {
           <li key={index}>{pair.join(', ')}</li>
         ))}
       </ul>
+
+      
     </>
   )
 }

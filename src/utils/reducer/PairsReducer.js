@@ -48,6 +48,15 @@ const PairsReducer = (state, action) => {
       }
     }
 
+    case 'RESET': {
+      return {
+        ...state,
+        numbers: [],
+        pairs: [],
+        message: '',
+      }
+    }
+
     default:
       return state
   }
