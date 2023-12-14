@@ -1,5 +1,5 @@
 import './App.css'
-import {useReducer } from "react";
+import { useReducer } from "react";
 
 import PairsReducer, { initialState } from './utils/reducer/PairsReducer.js';
 

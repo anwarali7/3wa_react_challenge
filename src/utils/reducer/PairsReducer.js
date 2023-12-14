@@ -10,16 +10,18 @@ const PairsReducer = (state, action) => {
   console.log(state, action);
   switch (action.type) {
     case 'ADD_RANDOM_NUMBER': {
-      let randomNumber = Math.floor(Math.random() * 30) + 1;
+      let randomNumber;
       if (state.numbers.length >= 30) {
         return {
           ...state,
           message: 'The list is full.'
         }
       }
-      while (state.numbers.includes(randomNumber)) {
+      do {
         randomNumber = Math.floor(Math.random() * 30) + 1;
       }
+      while (state.numbers.includes(randomNumber));
+
       return {
         ...state,
         numbers: state.numbers.concat(randomNumber),
